@@ -3,8 +3,7 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define e = Character("Eileen")
-
+define a = Character("Antony",color="#5942f4",kind=nvl)
 
 # The game starts here.
 
@@ -20,14 +19,32 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-    show eileen happy
 
     # These display lines of dialogue.
 
-    e "You've created a new Ren'Py game."
+    play music "mus/Tention.ogg"
 
-    e "Once you add a story, pictures, and music, you can release it to the world!"
+    a "."
+
+    a "."
+
+    a "So...What is your name?"
+
+    python:
+        name = renpy.input("So...What is your name?")
+
+    a "Hello,[name]!"
+
+    a "."
+
+    a "."
+
+    a "."
+
+    a "."
+
+    a "."
 
     # This ends the game.
-
+    
     return
