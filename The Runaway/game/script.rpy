@@ -4,6 +4,7 @@
 # name of the character.
 
 define a = Character("Antony",color="#5942f4",kind=nvl)
+define c = Character("[name]",color="#1b4ea0",kind=nvl)
 
 # The game starts here.
 
@@ -13,7 +14,7 @@ label start:
     # add a file (named either "bg room.png" or "bg room.jpg") to the
     # images directory to show it.
 
-    scene bg room
+    scene circuit
 
     # This shows a character sprite. A placeholder is used, but you can
     # replace it by adding a file named "eileen happy.png" to the images
@@ -24,6 +25,8 @@ label start:
 
     play music "mus/Tention.ogg"
 
+    "Hello."
+
     a "."
 
     a "."
@@ -33,11 +36,17 @@ label start:
     python:
         name = renpy.input("So...What is your name?")
 
+    c "My name is [c]."
+
     a "Hello,[name]!"
 
-    a "."
+    c "so...WHO THE HELL ARE YOU???"
 
     a "."
+
+    a "{color=#ff0000}heh.{/color}"
+
+    "hi."
 
     a "."
 
