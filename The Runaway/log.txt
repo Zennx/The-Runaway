@@ -1,35 +1,36 @@
-Fri Dec 07 22:53:13 2018
+Sat Dec 08 23:18:19 2018
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
  
 
-Bootstrap to the start of init.init took 0.10s
-Early init took 0.00s
-Loader init took 0.08s
-Loading error handling took 0.04s
-Loading script took 0.18s
+Bootstrap to the start of init.init took 0.13s
+Early init took 0.01s
+Loader init took 0.10s
+Loading error handling took 0.08s
+Loading script took 0.32s
 Loading save slot metadata. took 0.03s
 Loading persistent took 0.00s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 0.15s
-Loading analysis data took 0.04s
+Running init code took 0.16s
+Loading analysis data took 0.05s
 Analyze and compile ATL took 0.00s
 Index archives took 0.00s
-Dump and make backups. took 0.10s
+Backing up script files to 'C:\\Users\\User\\AppData\\Roaming/RenPy/backups\\The Runaway':
+Dump and make backups. took 0.12s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 Initial gc. took 0.02s
 DPI scale factor: 1.000000
 Creating interface object took 0.09s
 Cleaning stores took 0.00s
-Init translation took 0.04s
-Build styles took 0.01s
-Load screen analysis took 0.03s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.08s
+Init translation took 0.07s
+Build styles took 0.02s
+Load screen analysis took 0.00s
+Analyze screens took 0.04s
+Save screen analysis took 0.10s
+Prepare screens took 0.15s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.14s
 Running _start took 0.00s
 Performance test:
 Interface start took 0.03s
@@ -37,7 +38,7 @@ Interface start took 0.03s
 primary display bounds: (0, 0, 1440, 900)
 swap interval: 1 frames
 Windowed mode.
-Screen sizes: virtual=(1280, 720) physical=(1338, 753) drawable=(1338, 753)
+Screen sizes: virtual=(1280, 720) physical=(1253, 705) drawable=(1253, 705)
 Vendor: 'NVIDIA Corporation'
 Renderer: 'GeForce 710M/PCIe/SSE2'
 Version: '4.6.0 NVIDIA 388.71'
@@ -382,18 +383,18 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 2.25699996948s
+Total time until interface ready: 3.08100008965s
 - Target is 5 frames in 0.333333333333 seconds.
 - Frame drawn at 0.000000 seconds.
-- Frame drawn at 0.016667 seconds.
-- Frame drawn at 0.032667 seconds.
-- Frame drawn at 0.049667 seconds.
-- Frame drawn at 0.065667 seconds.
-- 0.065667 seconds to render 5 frames.
+- Frame drawn at 0.023667 seconds.
+- Frame drawn at 0.035667 seconds.
+- Frame drawn at 0.050667 seconds.
+- Frame drawn at 0.067667 seconds.
+- 0.067667 seconds to render 5 frames.
 Cleaning stores took 0.00s
-Init translation took 0.21s
+Init translation took 0.22s
 Build styles took 0.01s
-Load screen analysis took 0.02s
+Load screen analysis took 0.03s
 Analyze screens took 0.00s
 Prepare screens took 0.00s
 Running _start took 0.00s

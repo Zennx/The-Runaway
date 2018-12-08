@@ -29,7 +29,15 @@ define config.version = "1.0"
 ## Text that is placed on the game's about screen. Place the text between the
 ## triple-quotes, and leave a blank line between paragraphs.
 
-define gui.about = _p("""
+define gui.about = _("""    Produced by:  Zen
+
+    Storyline by:  Zen
+
+    Graphics by:  Zen
+
+         Music by:  Zen
+
+      Written by:  Zen
 """)
 
 
@@ -47,13 +55,13 @@ define build.name = "TheLab"
 
 define config.has_sound = True
 define config.has_music = True
-define config.has_voice = True
+define config.has_voice = False
 
 
 ## To allow the user to play a test sound on the sound or voice channel,
 ## uncomment a line below and use it to set a sample sound to play.
 
-# define config.sample_sound = "sample-sound.ogg"
+define config.sample_sound = "mus/alert1.ogg"
 # define config.sample_voice = "sample-voice.ogg"
 
 
