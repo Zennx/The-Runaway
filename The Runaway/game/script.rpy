@@ -22,7 +22,6 @@ label start:
     # replace it by adding a file named "eileen happy.png" to the images
     # directory.
 
-
     # These display lines of dialogue.
 
     "-YEAR 201X-"
@@ -137,6 +136,125 @@ label start:
 
     a "I guess lets hack our way in."
 
+    a "Any idea?"
+
+    menu:
+
+        "Hack in.":
+            jump choice2_yes
+
+        "Find another way.":
+            jump choice2_no
+
+    label choice2_yes:
+
+        $ menu_flag = True
+
+        c "I think hack it in is a good idea."
+
+        a "Knew you will always support me :)."
+
+        a "Alright,I'll try."
+
+        jump choice2_done
+
+    label choice2_no:
+
+        $ menu_flag = False
+
+        c "Well..."
+
+        c "I think it is better to find other ways in."
+
+        a "Hmm...yeah."
+
+        a "Let me look around."
+
+        a "Oh no..."
+
+        c "What [a]?"
+
+        a "I..I.."
+
+        a "I was surrounded by zombies..."
+
+        menu:
+
+            "Run.":
+                jump choice3_yes
+
+            "Just DIEE.":
+                jump choice3_no
+
+        label choice3_yes:
+
+            $ menu_flag = True
+
+            c "RUNNNN,[a]!"
+
+            a "I...I can't..."
+
+            c "Wait...what?Why?"
+
+            a "I have nowhere to run..."
+
+            a "I...I am sorry..."
+
+            a "Goodbye my frien-"
+
+            t " "
+
+            t " "
+
+            jump choice3_done
+
+        label choice3_no:
+
+            $ menu_flag = False
+
+            c "Very good..."
+
+            a "W-what?"
+
+            c "Don't you get it?"
+
+            a "No...It can't be..."
+
+            c "How pathetic..."
+
+            c "Just..."
+
+            c "{color=#ff0000}DIE NOW ALREADY!{/color}"
+
+            a "..."
+
+            a "Alright my friend..."
+
+            a "AHHHHHHHHHHH--"
+
+            "Monster..."
+
+            "Why."
+
+            "Why do you do this..."
+
+            "You murderer..."
+
+            "You don't even try."
+
+            "To save him..."
+
+            jump choice3_done
+
+        label choice3_done:
+
+        "Good"
+
+        jump choice2_done
+
+    label choice2_done:
+
+    "continue hwew"
     # This ends the game.
     
     return
