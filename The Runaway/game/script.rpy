@@ -9,6 +9,8 @@ define t = Character(None,kind=nvl)
 define name = "Player"
 
 # The game starts here.
+init python:
+    config.developer="auto"
 
 label start:
 
@@ -156,7 +158,7 @@ label start:
 
         a "Alright,I'll try."
 
-        jump choice2_done
+        jump hackin
 
     label choice2_no:
 
@@ -202,11 +204,7 @@ label start:
 
             a "Goodbye my frien-"
 
-            t " "
-
-            t " "
-
-            jump choice3_done
+            jump gameover
 
         label choice3_no:
 
@@ -244,6 +242,8 @@ label start:
 
             "To save him..."
 
+            return
+
             jump choice3_done
 
         label choice3_done:
@@ -255,6 +255,48 @@ label start:
     label choice2_done:
 
     "continue hwew"
+
+label hackin: #Hack in choice.
+
+    a "Just need a little more time..."
+    
+    a "And...Done!"
+
+    c "Great!"
+
+    a "Now let's go in."
+
+    a "What a scarry corridor..."
+
+    a "So dark..."
+
+    return
+
+
+
+
+label gameover: #Gameover texts
+
+    play sound "mus/alert1.ogg"
+    t "{color=#ffe900}--RECONNECTING--{/color}"
+
+    play sound "mus/alert2.ogg"
+    t "{color=#ff0000}--ERROR-DISCONNECTED--{/color}"
+
+    "Seems that..."
+
+    "[a] have died..."
+
+    "You have failed your mission,[c]."
+
+    "But don't give up just yet!"
+
+    "You can do this."
+
+    "Believe in yourself,[c]!"
+
+    "Stay determined..."
+
     # This ends the game.
     
     return
