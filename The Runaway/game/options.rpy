@@ -157,7 +157,7 @@ define config.save_directory = "TheRunaway-1544011942"
 ##
 ## The icon displayed on the taskbar or dock.
 
-define config.window_icon = "gui/window_icon.png"
+define config.window_icon = "gui/TheLabicon.png"
 
 
 ## Build configuration #########################################################
