@@ -1,28 +1,26 @@
 ﻿I'm sorry, but an uncaught exception occurred.
 
 While running game code:
-  File "game/script.rpy", line 12, in script
-    init python:
-  File "game/script.rpy", line 13, in <module>
-    config.develope="auto"
-Exception: config.develope is not a known configuration variable.
+  File "game/script.rpy", line 314, in script
+    python:
+  File "game/script.rpy", line 315, in <module>
+    renpy.music.play("mus/gameover.ogg",loop=None)
+NameError: name 'noloop' is not defined
 
 -- Full Traceback ------------------------------------------------------------
 
 Full traceback:
-  File "game/script.rpy", line 12, in script
-    init python:
+  File "game/script.rpy", line 314, in script
+    python:
   File "C:\Users\User\Downloads\renpy-7.1.3-sdk\renpy\ast.py", line 881, in execute
     renpy.python.py_exec_bytecode(self.code.bytecode, self.hide, store=self.store)
   File "C:\Users\User\Downloads\renpy-7.1.3-sdk\renpy\python.py", line 1913, in py_exec_bytecode
     exec bytecode in globals, locals
-  File "game/script.rpy", line 13, in <module>
-    config.develope="auto"
-  File "C:\Users\User\Downloads\renpy-7.1.3-sdk\renpy\defaultstore.py", line 95, in __setattr__
-    raise Exception('config.%s is not a known configuration variable.' % (name))
-Exception: config.develope is not a known configuration variable.
+  File "game/script.rpy", line 315, in <module>
+    renpy.music.play("mus/gameover.ogg",loop=None)
+NameError: name 'noloop' is not defined
 
 Windows-8-6.2.9200
 Ren'Py 7.1.3.1092
 The Lab 1.0
-Tue Dec 11 22:33:50 2018
+Fri Dec 14 16:23:51 2018

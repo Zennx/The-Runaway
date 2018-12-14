@@ -5,6 +5,7 @@
 
 define a = Character("Antony",color="#5942f4",kind=nvl)
 define c = Character("[name]",color="#1b4ea0",kind=nvl)
+define p = Character("Prof.",color="#ff0000",kind=nvl)
 define t = Character(None,kind=nvl)
 define name = "Player"
 
@@ -95,8 +96,10 @@ label start:
 
     play music "mus/Tention.ogg"
 
+    play sound "mus/alert1.ogg"
     t "{color=#ff0000}--STATIC--{/color}"
 
+    play sound "mus/alert1.ogg"
     t "{color=#93abff}--INCOMING TRANSMISSION--{/color}"
 
     a "H-hello?"
@@ -242,19 +245,20 @@ label start:
 
             "To save him..."
 
-            return
-
-            jump choice3_done
+            jump gameover
 
         label choice3_done:
 
-        "Good"
+        "Hello hacker lol"
 
         jump choice2_done
 
     label choice2_done:
 
-    "continue hwew"
+    "Why are you here,hacker?"
+
+    python:
+        renpy.quit()
 
 label hackin: #Hack in choice.
 
@@ -274,7 +278,81 @@ label hackin: #Hack in choice.
 
     a "Gross..."
 
+    a "I'm feeling dizzy..."
+
+    a "Oh no..."
+
+    a "AHHHHHHHHHHHHHHH"
+
+    c "[a] what happened?"
+
+    a "I fell..."
+
+    c "Are you alright?"
+
+    a "Yeah...I guess."
+
+    a "It hurts a little."
+
+    a "Aww my head..."
+
+    play sound "mus/alert1.ogg"
+    t "{color=#ffe900}[a] fainted.{/color}"
+
+    c "[a]?"
+
+    a "Uhh...Where am I?"
+
+    c "You fainted,[a].Are you alright?"
+
+    a "I-I'm alright now,thanks..."
+
+    a "B-but where am I???"
+
+    a "This place...it's so strange..."
+
+    a "It's so dim..."
+
+    a "Why am I imprisoned in..."
+
+    a "Something like a glass tube???"
+
+    a "What is going on..."
+
+    p "Greetings..."
     
+    a "Wh-who are you???"
+
+    p "Fear not,my friend..."
+
+    p "I am [p]."
+
+    p "Now you will be my experiment material."
+
+    P "HAHAHAHAHAHAHAHAHA"
+
+    a "No...nononono."
+
+    p "I can't wait MUAHAHAHA..."
+
+    a "..."
+
+    a "So what are you going to do to me?"
+
+    p "Why?Interested?"
+
+    a "..."
+
+    p "Haha...you will know soon,very soon my friend..."
+
+    p "I should go and prepare..."
+
+    p "I'll be back."
+
+    p "HAHAHAHAHAHA"
+
+    a "That guy is crazy!"
+
 
     return
 
@@ -282,12 +360,17 @@ label hackin: #Hack in choice.
 
 
 label gameover: #Gameover texts
+    
+    play music "mus/silence.ogg"
 
     play sound "mus/alert1.ogg"
     t "{color=#ffe900}--RECONNECTING--{/color}"
 
     play sound "mus/alert2.ogg"
     t "{color=#ff0000}--ERROR-DISCONNECTED--{/color}"
+
+    python:
+        renpy.music.play("mus/gameover.ogg",loop=None)
 
     "Seems that..."
 
@@ -302,6 +385,8 @@ label gameover: #Gameover texts
     "Believe in yourself,[c]!"
 
     "Stay determined..."
+
+    stop music fadeout 0.3
 
     # This ends the game.
     

@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 12: expected statement.
-    config.developer ="auto"
-                     ^
+File "game/script.rpy", line 314: could not parse statement.
+    play music "mus/gameover.ogg" loop=None
+                                      ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Tue Dec 11 22:30:59 2018
+Fri Dec 14 16:13:18 2018
