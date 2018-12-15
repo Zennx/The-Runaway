@@ -353,10 +353,45 @@ label hackin: #Hack in choice.
 
     a "That guy is crazy!"
 
+    a "Uhhh what should I do..."
+
+    a "What should I do???"
+
+    menu:
+
+        "Escape.":
+            jump choice4_yes
+
+        "No idea.":
+            jump choice4_no
+
+    label choice2_yes:
+
+        c "Try to escape,fast!"
+
+        jump escapecell
+
+    label choice2_no:
+
+        $ menu_flag = False
+
+        c "I...have no idea."
+
+        jump noidea
+
+    "Hii hacker ahahaha,feelin lost yet?"
 
     return
 
+label escapecell:
 
+    a "There's no way I can break out..."
+
+    c "There must be something..."
+
+label noidea:
+
+    a "Now what???"
 
 
 label gameover: #Gameover texts
