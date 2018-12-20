@@ -6,6 +6,7 @@
 define a = Character("Antony",color="#5942f4",kind=nvl)
 define c = Character("[name]",color="#1b4ea0",kind=nvl)
 define p = Character("Prof.",color="#ff0000",kind=nvl)
+define b = character(".",color="#",kind=nvl)
 define t = Character(None,kind=nvl)
 define name = "Player"
 
@@ -365,13 +366,13 @@ label hackin: #Hack in choice.
         "No idea.":
             jump choice4_no
 
-    label choice2_yes:
+    label choice4_yes:
 
         c "Try to escape,fast!"
 
         jump escapecell
 
-    label choice2_no:
+    label choice4_no:
 
         $ menu_flag = False
 
@@ -389,10 +390,89 @@ label escapecell:
 
     c "There must be something..."
 
+    a "Hmm let me think..."
+
+    c "What do you have on you?"
+
+    a "Hmm...Let me see."
+
+    a "Cutter and screwdrivers seems useful."
+
+    a "Sure it does,now let's see what I can do..."
+
+    a "Yahhhh!"
+
+    a "Whoo im out!"
+
+    c "Now run!"
+
+    a "I am!"
+
+    a "Hmm?"
+
+    a "Is that?"
+
+    a "My friend???"
+
+    a "I have to save her!"
+
+    menu:
+
+        "Save her.":
+            jump choice5_yes
+
+        "Don't save her.":
+            jump choice5_no
+
+    label choice5_yes:
+
+        c "Yeah we should!"
+
+        jump save
+
+    label choice5_no:
+
+        $ menu_flag = False
+
+        c "No we should'nt."
+
+        jump dontsave
+
+    "Hii hacker ahahaha,feelin lost yet?"
+
+    return
+
 label noidea:
 
     a "Now what???"
 
+    a "..."
+
+    p "I am back..."
+
+    p "So,are you ready for an experiment?"
+
+    a "N-no..."
+
+    p "Aww too bad."
+
+    p "We will start now."
+
+    a "NOOOO"
+
+    a "AHHHHHHHHHHHHHHHHH"
+
+    jump gameover
+
+label save:
+
+    a "Yeah."
+
+label dontsave:
+
+    a "W-what?Why not?"
+    
+    a "She's my friend anyway..."
 
 label gameover: #Gameover texts
     
