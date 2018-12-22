@@ -3,10 +3,10 @@
 # Declare characters used by this game. The color argument colorizes the
 # name of the character.
 
-define a = Character("Antony",color="#5942f4",kind=nvl)
-define c = Character("[name]",color="#1b4ea0",kind=nvl)
-define p = Character("Prof.",color="#ff0000",kind=nvl)
-define b = character(".",color="#",kind=nvl)
+define a = Character("Antony",color="#5942f4",kind=nvl)         #purple
+define c = Character("[name]",color="#1b4ea0",kind=nvl)         #blue
+define p = Character("Prof.Coloader",color="#ff0000",kind=nvl)  #red
+define f = Character("Feleria",color="#bc7aff",kind=nvl)        #violet
 define t = Character(None,kind=nvl)
 define name = "Player"
 
@@ -330,7 +330,7 @@ label hackin: #Hack in choice.
 
     p "Now you will be my experiment material."
 
-    P "HAHAHAHAHAHAHAHAHA"
+    p "HAHAHAHAHAHAHAHAHA"
 
     a "No...nononono."
 
@@ -468,11 +468,99 @@ label save:
 
     a "Yeah."
 
+    a "She's my friend."
+
+    a "We have to."
+
+    c "Right."
+
+    a "Hang tight I'm saving you,[f]!"
+
+    f "[a]!"
+
+    a "Yahhhhh!"
+
+    t "Glass shattering is heard."
+
+    a "You're saved!"
+
+    f "T-thanks,[a]."
+
+    f "How do you know I'm here and why are you here?"
+
+    a "No time to explain..."
+
+    a "We need to destroy this lab."
+
+    f "I can help."
+
+    a "Great!I appreciate that,[f]."
+
+    f "Hey it's no-"
+
+    a "We should get going."
+
+    f "Right."
+
+    f "The lab should be-"
+
+    f "*gasp* Oh no..."
+
+    p "Greetings..."
+
+    p "You guys were good at running away huh."
+
 label dontsave:
 
     a "W-what?Why not?"
     
-    a "She's my friend anyway..."
+    a "She's my friend..."
+
+    c "I don't trust if she is still herself..."
+
+    a "No."
+
+    c "[a]."
+
+    a "..."
+
+    a "Right..."
+
+    a "You got a good point."
+
+    a "Let's move on."
+
+    a "No..."
+
+    a "The corridor is blocked."
+
+    c "Find other routes then."
+
+    t "When [a] turned around."
+
+    t "[p] is behind him."
+
+    t "There is no escape."
+
+    p "There is no running now."
+
+    p "Now..."
+    
+    p "{color=#ff0000}I SHALL PROCEED ON MY EXPERIMENT ON YOU!{/color}"
+
+    p "{color=#ff0000}MUAHAHAHAHAHAHAHA{/color}"
+
+    a "NOOOOOOOOOOOOO"
+
+    a "You...you MONSTER!"
+
+    p "So what?"
+
+    a "AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH--"
+
+    jump gameover
+
+    return
 
 label gameover: #Gameover texts
     
