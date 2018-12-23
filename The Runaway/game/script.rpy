@@ -7,6 +7,7 @@ define a = Character("Antony",color="#5942f4",kind=nvl)         #purple
 define c = Character("[name]",color="#1b4ea0",kind=nvl)         #blue
 define p = Character("Prof.Coloader",color="#ff0000",kind=nvl)  #red
 define f = Character("Feleria",color="#bc7aff",kind=nvl)        #violet
+define r = Character("Robo-zombies",kind=nvl)
 define t = Character(None,kind=nvl)
 define name = "Player"
 
@@ -55,6 +56,14 @@ label start:
     "He needs your help."
 
     "He needs you..."
+
+    "If you don't help him..."
+
+    "The people will be in pain."
+
+    "The people will be in great fear."
+
+    "Screams can be heard."
 
     "So,will you help him?"
 
@@ -509,6 +518,232 @@ label save:
     p "Greetings..."
 
     p "You guys were good at running away huh."
+
+    p "I'm afraid there's nowhere to run now."
+
+    f "No,there is!"
+
+    p "Ahh!"
+
+    play sound "mus/alert1.ogg"
+    t "[p] have fainted."
+
+    f "Fast,run!"
+
+    a "Haa whoo...That was close,than-"
+
+    f "Hide!"
+
+    a "Wha-"
+
+    f "It's robo-zombies..."
+
+    f "Zombies that was controlled by a computer."
+
+    f "It's going to be really hard to go into the lab like this..."
+
+    a "Hmm right."
+
+    a "What do you think,[c]?"
+
+    menu:
+
+        "The vent.":
+            jump choice6_yes
+
+        "Run.":
+            jump choice6_no
+
+    label choice6_yes:
+
+        c "What about using the vent system?"
+
+        jump vent
+
+        return
+
+    label choice6_no:
+
+        $ menu_flag = False
+
+        c "Just run."
+
+        jump run
+
+        return
+
+label vent:
+    f "That's a great idea!"
+
+    f "But how are we going to get in there?"
+
+    a "I'll settle it."
+
+    a "And we're in!"
+
+    f "Good thing you bought some tools with you."
+
+    a "Yeah,always comes in handy."
+
+    f "Right."
+
+    a "Is this the lab?"
+
+    f "Seems like it."
+
+    a "Great!"
+
+    a "We're going in then."
+
+    a "Now what is that?"
+
+    f "Ah,that's the computer used to control the zombies!"
+
+    a "Can we access it?"
+
+    f "Yeah."
+
+    a "Nice."
+
+    a "So how are we going to destroy the lab..."
+
+    f "I think we can use the antidote."
+
+    a "But how..."
+
+    f "We need an access card to get the antidote."
+
+    a "And how are we going to get that"
+
+    f "S-steal f-from [p],of course..."
+
+    a "Right..."
+
+    menu:
+
+        "Use robo-zombies.":
+            jump choice7_yes
+
+        "Comfront [p].":
+            jump choice7_no
+
+    label choice7_yes:
+
+        c "Why not try using the robo-zombies against him?"
+
+        jump robotfight
+        return
+
+    label choice7_no:
+
+        $ menu_flag = False
+
+        c "I...have no idea."
+
+        jump confrontation
+        return
+
+label run:
+
+    a "Run past them???"
+
+    c "Yes.If that's the only way."
+
+    a "Hmm okay."
+
+    f "Follow me."
+
+    a "Alright."
+
+    a "Oh no..."
+
+    f "H-how...?"
+
+    p "Pathetic isn't it."
+
+    p "You guys still returned to me."
+
+    f "...You!"
+
+    p "I have been trackking you with your little device."
+
+    p "How helpful."
+
+    a "..."
+
+    p "Let's proceed with our experiment,shall we?"
+
+    f "NO!"
+
+    a "..."
+
+    a "AHHHHHHHHHHH"
+
+    p "HAHAHAHAHAHA"
+
+    f "NOOOOOOOOOOOOO"
+
+    f "..."
+
+    jump gameover
+
+label robotfight:
+
+    f "Great!"
+
+    a "Let's see..."
+
+    a "Oh great."
+
+    f "What is it,[a]?"
+
+    a "[p] is heading towards the lab."
+
+    f "I can handle this,but please be fast."
+
+    a "I will,please stay safe,[f]."
+
+    f "I will."
+
+    a "That's great."
+
+    a "Hmm let's see."
+
+    a "Hehe this is fun."
+
+    a "Controlling robots is always fun."
+
+    a "Knock him out haha."
+
+    a "Oh no."
+
+    a "I got locked out."
+
+    c "Hack it,fast!"
+
+    a "Right."
+
+    f "I got the card!"
+
+    a "Great!"
+
+    a "Ok good I have access back."
+
+    a "Go get the antidote,now!"
+
+    f "I'm going!"
+
+    a "Please make it..."
+
+    a "Hmm virus storage?"
+
+    a "Sounds important."
+
+
+
+
+
+label confrontation:
 
 label dontsave:
 
