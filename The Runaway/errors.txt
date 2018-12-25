@@ -2,9 +2,9 @@
 errors listed below, and try again.
 
 
-File "game/script.rpy", line 314: could not parse statement.
-    play music "mus/gameover.ogg" loop=None
-                                      ^
+File "game/script.rpy", line 987: expected 'label_name' not found.
+    jump mazefail.
+        ^
 
 Ren'Py Version: Ren'Py 7.1.3.1092
-Fri Dec 14 16:13:18 2018
+Tue Dec 25 16:40:02 2018
